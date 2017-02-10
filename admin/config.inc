@@ -42,8 +42,8 @@ require_once ('entity/class/all/categorie.php');
 require_once('controllers/admin/userSiteController.php');
 require_once ('entity/class/admin/user.php');
 // doc
-require_once('controllers/all/docController.php');
-require_once ('entity/class/all/doc.php');
+require_once('controllers/all/produitsController.php');
+require_once ('entity/class/all/produits.php');
 //email
 require_once('controllers/all/emailController.php');
 require_once ('entity/class/all/email.php');

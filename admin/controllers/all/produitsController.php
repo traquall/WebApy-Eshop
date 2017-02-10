@@ -153,23 +153,17 @@ class docController {
          return $rsu;
         
      }
-       public static function getlid(){
 
-         $rsu = DB::get_sql_tab("SELECT id FROM document ORDER BY id DESC limit 0,1");
-         return $rsu;
-        
-     }
-
-    public static function getCatDoc($id_doc){
+    public static function getCatProd($id_doc){
         $rsu = DB::get_sql_tab("SELECT id_cat FROM cat_doc WHERE `id_doc`='".$id_doc."'");
         return $rsu;
     }
     
-    public static function setCatDoc($id_cat,$id_doc){
+    public static function setCatProd($id_cat,$id_doc){
         DB::query("INSERT INTO cat_doc (`id_cat`,`id_doc`) values ('".$id_cat."','".$id_doc."')");
         
     }
-     public static function delCatDoc($id_doc){
+     public static function delCatProd($id_doc){
         DB::query("DELETE FROM cat_doc WHERE `id_doc`='".$id_doc."'");
         
     }
@@ -179,18 +173,4 @@ class docController {
          return $rsu;
         
      }  
-
-    public static function rec_in_array($needle, $haystack, $alsokeys=false)
-    {
-        if(!is_array($haystack)) return false;
-        if(in_array($needle, $haystack) || ($alsokeys && in_array($needle, array_keys($haystack)) )) return true;
-        else {
-            foreach($haystack AS $element) {
-                if(docController::rec_in_array($needle, $element, $alsokeys)){
-                    return true;
-                }
-            }
-            return false;
-        }
-    } 
 }
