@@ -1,0 +1,17 @@
+{
+  "data": [{
+    "message": "<img src='assets/img/img1.jpg'/><small>Le 20/11/2016</small><br>La 156eme vente des Vins des Hospices de Beaune à été ouverte par Virginie Ledoyen <br>Les vins partent aux enchères....<br>La Maison Patriarche est sur les rangs pour acquérir les plus appellations<br><br>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ. À CONSOMMER AVEC MODÉRATION</p>",
+    "story": "<img src='assets/img/img1.jpg' style='height:166px; width:355px;'/>",
+    "created_time": "2016-11-20T17:50:53+0000",
+    "id": "181884451961063_726440974172072"
+  }, {
+    "message": "<img src='assets/img/img2.jpg'/><small>Le 21/11/2016</small><br>C'est terminé pour la Vente Des Vins (hospices De Beaune) 2016 et aussi pour notre temps fort du moment ! Avec plus de 1500 participants, nous venons d'effectuer le tirage au sort des gagnants parmi tous ceux qui ont réussi à trouver le juste prix* du magnum de Pommard 1er Cru Clos de Verger 2010... La réponse était 75€  :-). Merci à tous les participants, ainsi qu'à tous ceux qui nous suivent fidèlement ! Les gagnants seront prochainement contactés par email pour leur faire part de leur sélection et du gain remporté. basé sur le prix de vente TTC dans nos caves uniquement, voir règlement.",
+    "story": "Patriarche - Beaune at Patriarche - Beaune.",
+    "created_time": "2016-11-19T09:47:12+0000",
+    "id": "181884451961063_725659510916885"
+  }],
+  "paging": {
+    "previous": "https://graph.facebook.com/v2.8/181884451961063/feed?limit=2&format=json&since=1479664253&access_token=<access token sanitized>&__paging_token=enc_AdA2NzHDnjIlweydNn9IWkkrfskfnbHwZC6p9lSvAUZBajZCA0jsI1csIJAeKjuXyDybiom3S3iFVaB3QkGkObZBrZB17WK7ps6yzciZBpwPbe16B8kQZDZD&__previous=1",
+    "next": "https://graph.facebook.com/v2.8/181884451961063/feed?limit=2&format=json&access_token=<access token sanitized>&until=1479548832&__paging_token=enc_AdBbKgBr1IZB9JKoNY5sPf1vr7rff7WZCSlvAmzZAulmp7ZA7PFT5Y48E03414G258TTeENRIlZAjxHXc9HAIs6FPDgCtpM53ykU6ZAsnuhwAOB4pfQwZDZD"
+  }
+}

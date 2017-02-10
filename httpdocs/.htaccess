@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^$ index.php?page=site&site=accueil [L]
+
+RewriteRule ^([a-z0-9-]+)$ index.php?page=site&site=$1 [L] 
+
+ErrorDocument 404 /404/404.html

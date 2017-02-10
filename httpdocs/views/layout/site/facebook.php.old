@@ -1,0 +1,27 @@
+<?php
+// [params]
+if($_SERVER["REMOTE_ADDR"]=="77.157.121.187"){
+	require_once("assets/plugins/facebook-sdk/src/Facebook/autoload.php");
+	$app_id = "1663206980675411"; // id de l'application
+	$app_secret = "2c4121ef4c85f8943c60a591b32a22c1"; // code secret de l'application
+	$pageid = "181884451961063";
+	$accesstoken = "EAACEdEose0cBAEDM1H2vC8PIJbF1EY3YBlrajx6KS6eXtzSZAsYLhnH27RYsrZBxn2OcIZC1qITxYeYFVfgQHpLT4CYzyr3HaybcmY1DWUYgFb7pIMyZAaV5TyZCZAZBQnZAGdftWwEZCo3720cfVfFhGCU7xuY87XukZB0E0GZBZC08sgZDZD";
+
+// Initialize the Facebook PHP SDK v5.
+$fb = new Facebook\Facebook([
+  'app_id'                => $app_id,
+  'app_secret'            => $app_secret,
+  'default_graph_version' => 'v2.8',
+]);
+
+// On défini le token pour toutes les requêtes qui vont suivre.
+$fb->setDefaultAccessToken($accesstoken);
+$res = $fb->get("https://graph.facebook.com/v2.3/Patriarche1780/feed/?limit=2");
+die(print_r($res));
+$response = $request->execute();
+$graphObject = $response->getGraphObject();
+print_r($graphObject);
+/* handle the result */
+
+}
+?>
