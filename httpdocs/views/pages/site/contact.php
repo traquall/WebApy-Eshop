@@ -2,10 +2,10 @@
 namespace Noneslad\Controllers;
 use Noneslad\Entity\email;
 use Noneslad\Tools\WebTools;
-               
+
 
 if (isset($_POST['soci'])
-    && isset($_POST['tel']) 
+    && isset($_POST['tel'])
     && isset($_POST['prenom'])
     && isset($_POST['email'])
     && isset($_POST['message'])
@@ -14,11 +14,11 @@ if (isset($_POST['soci'])
     && !empty($_POST['message'])
     && !empty($_POST['objet'])) {
 
-    
+
     $email = addslashes($_POST['email']);
     $prenom = addslashes($_POST['prenom']);
     $message = addslashes($_POST['message']);
-    $phone = addslashes($_POST['tel']);  
+    $phone = addslashes($_POST['tel']);
     $soci = addslashes($_POST['soci']);
 
 
@@ -31,7 +31,7 @@ if (isset($_POST['soci'])
      <p>Bonjour, </p>
      <p><strong>Vous avez reçu une demande d'information: </strong></p>
      <strong>prenom : </strong>" . stripslashes($prenom) . "<br/>
-     <strong> soci&eacute;t&eacute; : </strong>" . stripslashes($soci) . "<br/> 
+     <strong> soci&eacute;t&eacute; : </strong>" . stripslashes($soci) . "<br/>
      <strong>message : </strong>" . stripslashes($message) . "<br/>
      <strong> email : </strong>" . stripslashes($email) . " <br/>
      <strong> télèphone : </strong>" . stripslashes($phone) . " <br/>";
@@ -108,7 +108,7 @@ if (isset($_POST['soci'])
 												<fieldset>
 													<div class="col-sm-6">
 														<div class="form-group">
-															<input type="text" class="form-control" name="prenom" placeholder="Pré">
+															<input type="text" class="form-control" name="prenom" placeholder="Prénom">
 														</div>
 													</div>
 													<div class="col-sm-6">
