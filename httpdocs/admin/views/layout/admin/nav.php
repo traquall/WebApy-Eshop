@@ -88,8 +88,8 @@ $id = User::giveMeUser()->getId();
                     </ul>
                     <!-- second-level-items -->
                 </li>
-                <!--<li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> DOCUMENT<span class="fa arrow"></span></a>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> PRODUITS<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="index.php?page=admin&crud=document&action=create" class="glyphicon glyphicon-share-alt
@@ -100,8 +100,8 @@ $id = User::giveMeUser()->getId();
                                "> LISTE</a>
                         </li>
                     </ul>
-                   
-                </li>-->
+
+                </li>
 
                 <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> PAGES<span class="fa arrow"></span></a>
@@ -117,7 +117,7 @@ $id = User::giveMeUser()->getId();
                     </ul>
                     <!-- second-level-items -->
                 </li>
-               
+
                  <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> ARTICLES<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -171,7 +171,7 @@ $id = User::giveMeUser()->getId();
                                        "> LISTE</a>
                                 </li>
                             </ul>
-                             
+
                         </li>
 
 
@@ -200,7 +200,7 @@ $id = User::giveMeUser()->getId();
                                        "> LISTE</a>
                                 </li>
                             </ul>
-                    
+
                         </li>
                     </ul>
                 </li>
