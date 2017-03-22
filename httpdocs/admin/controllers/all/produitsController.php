@@ -140,25 +140,24 @@ class docController {
         return $staticdocument->find_all();
     } 
 
-       public static function geten(){
-           $rsu = DB::get_sql_tab("select * from document WHERE id_lang = 2
-                                AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-         return $rsu;   
-     }
+    public static function geten(){
+        //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2
+        //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
+        $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2");
+        return $rsu;
+    }
 
-        public  static function getfr(){
+    public  static function getfr(){
+        //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1
+        //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
+        $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1");
+        return $rsu;
+    }
 
-       $rsu = DB::get_sql_tab("select * from document WHERE id_lang = 1
-                                AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-         return $rsu;
-        
-     }
-       public static function getlid(){
-
+    public static function getlid(){
          $rsu = DB::get_sql_tab("SELECT id FROM document ORDER BY id DESC limit 0,1");
-         return $rsu;
-        
-     }
+         return $rsu;        
+    }
 
     public static function getCatDoc($id_doc){
         $rsu = DB::get_sql_tab("SELECT id_cat FROM cat_doc WHERE `id_doc`='".$id_doc."'");

@@ -36,7 +36,7 @@ class docController {
                 include 'views/components/document/new.php';
                 break;
             case 'POST':
-                $document = new document();
+                $document = new produit();
 
                 $document->setNom(WebTools::fromRequest('nom'));
                 $document->setId_lang(WebTools::fromRequest('id_lang'));
@@ -78,7 +78,7 @@ class docController {
     public static function update(){
         switch ($_SERVER['REQUEST_METHOD']){
             case 'GET':
-                $document = new document(WebTools::fromRequest('id'));
+                $document = new produit(WebTools::fromRequest('id'));
                 $formData['id'] = $document->getId();
                 $formData['id_lang'] = $document->getId_lang();
                 $formData['nom'] = $document->getNom();
@@ -122,6 +122,7 @@ class docController {
                 break;
         }
     }
+
     public static function delete(){
         $document = new document(WebTools::fromRequest('id'));
         // On supprime la liaison
@@ -131,27 +132,26 @@ class docController {
         WebTools::setInFlashBag('Notice', "Le document ".$document->getNom()."  à été supprimé !");
         $_GET["id"]=WebTools::fromRequest('idcat');
         include 'views/components/document/list.php';
-
-
     }
-//slectionnée toutes les pages
+
+    //slectionnée toutes les pages
     public static function findAll(){
         $staticdocument = new document();
         return $staticdocument->find_all();
     }
 
-       public static function geten(){
-           $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2
-                                AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-         return $rsu;
-     }
+    public static function geten(){
+        //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2
+        //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
+        $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2");
+        return $rsu;
+    }
 
-        public  static function getfr(){
-
-       $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1
-                                AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-         return $rsu;
-
+    public  static function getfr(){
+        //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1
+        //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
+        $rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1");
+        return $rsu;
      }
 
     public static function getCatProd($id_doc){
@@ -161,16 +161,14 @@ class docController {
 
     public static function setCatProd($id_cat,$id_doc){
         DB::query("INSERT INTO cat_doc (`id_cat`,`id_doc`) values ('".$id_cat."','".$id_doc."')");
-
     }
-     public static function delCatProd($id_doc){
+
+    public static function delCatProd($id_doc){
         DB::query("DELETE FROM cat_doc WHERE `id_doc`='".$id_doc."'");
-
     }
-      public  function getcat(){
 
-         $rsu = DB::get_sql_tab("select * from categorie WHERE id_lang='".$_SESSION["langue"]."'");
-         return $rsu;
-
-     }
+    public  function getcat(){
+        $rsu = DB::get_sql_tab("select * from categorie WHERE id_lang='".$_SESSION["langue"]."'");
+        return $rsu;
+    }
 }

@@ -17,7 +17,7 @@ $html = new html();
 <script src="assets/scripts/back/jquery-1.11.2.min.js"></script>
  <script src="assets/scripts/back/app.js" type="text/javascript"></script>
 
-<title>login patriarche</title>
+<title>login spectasonic</title>
 </head>
 <body>
 <div class="container">

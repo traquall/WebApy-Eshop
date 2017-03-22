@@ -6,7 +6,7 @@ session_start();
 define('PARAM_hote', 'localhost');
 define('PARAM_port','3306');
 
-define('PARAM_nom_bd','patriarche');
+define('PARAM_nom_bd','web');
 define('PARAM_utilisateur','root');
 define('PARAM_mot_passe','');
 define('IMG_FILE','assets/img/');

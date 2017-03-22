@@ -27,7 +27,7 @@ namespace Noneslad\Controllers;
     </tr>
     <tr>
         <th>voir sur le site</th>
-        <td><a class="btn btn-primary" href="http://patriarche.melis.fr/<?php echo $pageweb->getRewrite(); ?>" target="_blank" >
+        <td><a class="btn btn-primary" href="http://localhost/webApy-Eshop/httpdocs/<?php echo $pageweb->getRewrite(); ?>" target="_blank" >
 <i class="glyphicon glyphicon-open-file"></i>
 </a>
         </td>

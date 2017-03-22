@@ -36,13 +36,13 @@ if (isset($_POST['soci'])
      <strong> email : </strong>" . stripslashes($email) . " <br/>
      <strong> télèphone : </strong>" . stripslashes($phone) . " <br/>";
       $return_path = "-f" . "webchalon@gmail.com";
-                $recipient = stripslashes("contact@patriarche.com");
-                $subject = "Site Patriarche : nouveau message";
+                $recipient = stripslashes("contact@spectasonic.com");
+                $subject = "Site spectasonic : nouveau message";
                 $mailheaders = "MIME-Version: 1.0 \n";
                 $mailheaders .= "Content-type: text/html; charset=UTF-8 \n";
                 $mailheaders .= "From:".$nom." <".$email."> \n";
                 $mailheaders .= "Reply-To: ".$email."\n\n";
-                mail($recipient, $subject, $msg, $mailheaders,'-f noreply@patriarche.com');
+                mail($recipient, $subject, $msg, $mailheaders,'-f noreply@spectasonic.com');
                 echo '<div style="display: block; " class="alert alert-success" role="alert">' . $ree . '</div>';
             }
 

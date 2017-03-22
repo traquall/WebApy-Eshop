@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administration Patriarche</title>
+    <title>Administration Spectasonic</title>
     <!-- Core CSS - Include with every page -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/fonts/css/font-awesome.css" rel="stylesheet" />
