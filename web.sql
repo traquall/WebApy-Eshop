@@ -3,6 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost
+
 -- Généré le :  Jeu 23 Mars 2017 à 17:47
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  5.6.30
@@ -187,6 +188,7 @@ CREATE TABLE `optionsite` (
 
 INSERT INTO `optionsite` (`id`, `heurevisite`, `heureabonne`, `tel`, `keywords`, `text`, `lienf`, `lieng`, `lient`, `logo`, `actu`, `sliderex`) VALUES
 (1, 'Inscrivez-vous Ã  notre lettre d\'information pour Ãªtre averti en premier des nouveautÃ©s, promotions et activitÃ©s', 'Ouvert tous les jours : <br>9 h 30 Ã  11 h 30 - 14 h 00 Ã  17 h 30 <br>ArrivÃ©e pour la visite au plus tard Ã  11h15 ou 17h15 <br>Du 01/10 au 31/03, <br>fermeture Ã  17 h 00 les samedis, dimanches et jours fÃ©riÃ©s. <br>Prestation unique le 18 et 19 novembre 2017 - tarif sur demande. <br>FermÃ© les 17 novembre, 24, 25, 31 dÃ©cembre et le 1er janvier.', ' 03.80.24.53.78', 'Découvrez les meilleurs équipements audio !', 'Trouver le matériel audio dont vous avez besoin dans notre magasin !', 'https://www.facebook.com/', 'https://plus.google.com', 'https://twitter.com/', 'assets/content/upload/SPECTASONICS-logo.png', '<p><span style=\"color:#D3D3D3\">N&eacute;e et &eacute;lev&eacute;e &agrave;&nbsp; New York elle &eacute;tudie au couvent du Sacr&eacute;-C&oelig;ur et fr&eacute;quente bri&egrave;vement</span></p>\r\n', '/var/www/vhosts/patriarche.melis.fr/httpdocs/assets/content/upload/visite-caves.jpg');
+
 
 -- --------------------------------------------------------
 
