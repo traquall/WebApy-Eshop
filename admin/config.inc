@@ -35,15 +35,19 @@ require_once('controllers/admin/AdminController.php');
 // PagesWeb
 require_once('controllers/all/pageWebController.php');
 require_once ('entity/class/all/pageWeb.php');
+
 // categorie
 require_once('controllers/all/categorieController.php');
 require_once ('entity/class/all/categorie.php');
+
 //user
 require_once('controllers/admin/userSiteController.php');
 require_once ('entity/class/admin/user.php');
-// doc
+
+// produits
 require_once('controllers/all/produitsController.php');
 require_once ('entity/class/all/produits.php');
+
 //email
 require_once('controllers/all/emailController.php');
 require_once ('entity/class/all/email.php');
@@ -51,15 +55,19 @@ require_once ('entity/class/all/email.php');
 //option
 require_once('controllers/all/optionController.php');
 require_once ('entity/class/all/option.php');
+
 //optionsiteen
 require_once('controllers/all/optionenController.php');
 require_once ('entity/class/all/optionsite.php');
+
 //extranet
 require_once('controllers/all/extranetController.php');
 require_once ('entity/class/all/extranet.php');
+
 //image
 require_once('controllers/all/imageController.php');
 require_once ('entity/class/all/image.php');
+
 //article
 require_once('controllers/all/actualitController.php');
 require_once ('entity/class/all/actualite.php');

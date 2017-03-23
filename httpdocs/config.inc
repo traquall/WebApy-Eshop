@@ -73,6 +73,12 @@ require_once('controllers/all/actualitController.php');
 
 require_once ('entity/class/all/actualite.php');
 
+// Produits
+
+require_once('controllers/all/produitsController.php');
+
+require_once ('entity/class/all/produits.php');
+
 
 //optionsiteen
 

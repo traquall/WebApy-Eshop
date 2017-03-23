@@ -25,7 +25,7 @@ class produitsController {
                 break;
 
             default :
-                include 'views/components/produits/list.php';
+                include 'views/components/document/list.php';
                 break;
         }
     }
@@ -33,7 +33,7 @@ class produitsController {
     public static function create(){
         switch ($_SERVER['REQUEST_METHOD']){
             case 'GET':
-                include 'views/components/produits/new.php';
+                include 'views/components/document/new.php';
                 break;
             case 'POST':
                 $produit = new produits();
@@ -66,19 +66,19 @@ class produitsController {
                 $produit->insert();
 
                 /*
-                $pp= produitsController::getlid();
+                $pp= docController::getlid();
                 $der_id = $pp[0]["id"];
                 $values = WebTools::fromRequest('id_cat');
                 $idcat = 0;
                 foreach ($values as $a){
                     $idcat = $a;
-                    produitsController::setCatDoc($a,$der_id);
+                    docController::setCatDoc($a,$der_id);
                 }*/
 
           //Insertion de chaque ligne dans la table.
-                WebTools::setInFlashBag('Notice', "Le produit ".$produit->getNom()."  à été enregistré avec succés !");
+                WebTools::setInFlashBag('Notice', "Le document ".$produit->getNom()."  à été enregistré avec succés !");
                 $_GET["id"]=WebTools::fromRequest('cat');
-                include 'views/components/produits/list.php';
+                include 'views/components/document/list.php';
                 break;
         }
     }
@@ -86,55 +86,55 @@ class produitsController {
 
 
     public static function read(){
-        $produit = new produits(WebTools::fromRequest('id'));
-        include 'views/components/produits/show.php';
+        $produit = new document(WebTools::fromRequest('id'));
+        include 'views/components/document/show.php';
     }
 
 
     public static function update(){
         switch ($_SERVER['REQUEST_METHOD']){
             case 'GET':
-                $produit = new produits(WebTools::fromRequest('id'));
-                $formData['id'] = $produit->getId();
-                $formData['id_lang'] = $produit->getId_lang();
-                $formData['nom'] = $produit->getNom();
-                $formData['ext'] = $produit->getExt();
-                $formData['cat'] = $produit->getCat();
-                $formData['fichier'] = $produit->getUrl();
+                $document = new produit(WebTools::fromRequest('id'));
+                $formData['id'] = $document->getId();
+                $formData['id_lang'] = $document->getId_lang();
+                $formData['nom'] = $document->getNom();
+                $formData['ext'] = $document->getExt();
+                $formData['cat'] = $document->getCat();
+                $formData['fichier'] = $document->getUrl();
 
-                include 'views/components/produits/edit.php';
+                include 'views/components/document/edit.php';
                     break;
             case 'POST':
-                $produit = new produits(WebTools::fromRequest('id'));
-                $produit->setId(WebTools::fromRequest('id'));
-                $produit->setNom(WebTools::fromRequest('nom'));
-                $produit->setCat(WebTools::fromRequest('cat'));
+                $document = new document(WebTools::fromRequest('id'));
+                $document->setId(WebTools::fromRequest('id'));
+                $document->setNom(WebTools::fromRequest('nom'));
+                $document->setCat(WebTools::fromRequest('cat'));
 
                 $data=date("Y-m-d");
-                $produit->setDate_m($data);
+                $document->setDate_m($data);
 
                 if($_FILES['fichier']['name']!=""){
 
-                    $produit->setUrl('fichier');
+                    $document->setUrl('fichier');
                 }
                 $p=$_FILES['fichier']['name'];
                 $rest = explode(".", $p);
                 $ext = $rest[intval(count($rest)-1)];
-                $produit->setExt($ext);
-                $produit->update();
+                $document->setExt($ext);
+                $document->update();
 /**/
                 $der_id = WebTools::fromRequest('id');
-                produitsController::delCatDoc($der_id);
+                docController::delCatDoc($der_id);
                 $values = WebTools::fromRequest('id_cat');
                 $idcat = 0;
                 foreach ($values as $a){
                     $idcat = $a;
-                    produitsController::setCatDoc($a,$der_id);
+                    docController::setCatDoc($a,$der_id);
                 }
 
-                WebTools::setInFlashBag('Notice', "Le produit ".$produits->getNom()."  à été modifié avec succés !");
+                WebTools::setInFlashBag('Notice', "Le document ".$document->getNom()."  à été modifié avec succés !");
                 $_GET["id"]=$idcat;
-                include 'views/components/produits/list.php';
+                include 'views/components/document/list.php';
                 break;
         }
     }
@@ -142,24 +142,24 @@ class produitsController {
     public static function delete(){
         //$document = new document(WebTools::fromRequest('id'));
         // On supprime la liaison
-        //produitsController::delCatDoc(WebTools::fromRequest('id'));
+        //docController::delCatDoc(WebTools::fromRequest('id'));
         // On supprime le doc
         DB::query("delete from produits where id="+WebTools::fromRequest('id')+";");
-        WebTools::setInFlashBag('Notice', "Le produit à été supprimé !");
+        WebTools::setInFlashBag('Notice', "Le document à été supprimé !");
         $_GET["id"]=WebTools::fromRequest('idcat');
-        include 'views/components/produits/list.php';
+        include 'views/components/document/list.php';
     }
 
     //slectionnée toutes les pages
     public static function findAll(){
-        $staticproduit = new produits();
-        return $staticproduit->find_all();
+        $staticdocument = new document();
+        return $staticdocument->find_all();
     }
 
     public static function geten(){
         //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 2
         //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-        echo '<script>console.log("coucou1")</script>';
+        echo '<script>console.log("coucou")</script>';
         $rsu = DB::get_sql_tab("select * from produits");
         return $rsu;
     }
@@ -167,7 +167,7 @@ class produitsController {
     public  static function getfr(){
         //$rsu = DB::get_sql_tab("select * from produits WHERE id_lang = 1
         //                    AND id IN (SELECT id_doc FROM cat_doc WHERE id_cat='".$_GET["id"]."')");
-        echo '<script>console.log("coucou1")</script>';
+        echo '<script>console.log("coucou")</script>';
         $rsu = DB::get_sql_tab("select * from produits");
         return $rsu;
      }

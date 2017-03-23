@@ -7,7 +7,6 @@ use Noneslad\Tools\DB\model;
 use Noneslad\Tools\DB\model as DB;
 
 class produits extends model
-
 {
     protected $id;
     protected $nom;
