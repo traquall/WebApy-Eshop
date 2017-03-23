@@ -73,7 +73,7 @@ use Noneslad\Entity\optionsite;
                                             <li>
                                                 <span>Email:</span>
                                                 <span>
-                                                    <i><a href="support@spectrasonic.com">support@spectrasonic.com</a></i>
+                                                    <i><a href="support@spectasonic.com">support@spectasonic.com</a></i>
                                                 </span>
                                             </li>
                                         </ul>

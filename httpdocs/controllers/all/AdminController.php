@@ -11,7 +11,7 @@ use Noneslad\Entity\image;
 use Noneslad\Entity\article;
 use Noneslad\Entity\extranet;
 use Noneslad\Entity\categorie;
-use Noneslad\Entity\document;
+use Noneslad\Entity\produits;
 use Noneslad\Entity\optionsite_en;
 use Noneslad\Tools\DB\model as DB;
 
@@ -21,6 +21,7 @@ class AdminController {
     /* ------------------------------------------------------------ */
 
     public static function routing() {
+        
         if (User::isAnyConnected()) {
             $user = User::giveMeUser();
             if ($user->getNiveau() == 40) {
@@ -50,13 +51,12 @@ class AdminController {
                     case 'categorie' :
                         categorieController::routing();
                         break;
-                    case 'document' :
-                        docController::routing();
+                    case 'produits' :
+                        produitsController::routing();
                         break;
-                          case 'optionsite_en' :
+                    case 'optionsite_en' :
                         optionenController::routing();
                         break;
-
                     default :
                         include 'views/pages/admin/home.html';
                 }

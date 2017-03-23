@@ -262,6 +262,8 @@ class model {
         $cnx = new PDO('mysql:host=' . PARAM_hote . ';port=' . PARAM_port . ';dbname=' . PARAM_nom_bd, PARAM_utilisateur, PARAM_mot_passe, array(PDO::ATTR_PERSISTENT => true));
         $rq = $cnx->query($la_requete);
         $cnx->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        if(gettype($rq) == "boolean")
+            return true;
         return $rq->fetchAll();
     }
     public static function get_sql_tab($la_requete) {

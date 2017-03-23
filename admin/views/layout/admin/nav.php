@@ -92,11 +92,11 @@ $id = User::giveMeUser()->getId();
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> PRODUITS<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="index.php?page=admin&crud=document&action=create" class="glyphicon glyphicon-share-alt
+                            <a href="index.php?page=admin&crud=produits&action=create" class="glyphicon glyphicon-share-alt
                                "> AJOUTER</a>
                         </li>
                         <li>
-                            <a href="index.php?page=admin&crud=document" class="glyphicon glyphicon-share-alt
+                            <a href="index.php?page=admin&crud=produits" class="glyphicon glyphicon-share-alt
                                "> LISTE</a>
                         </li>
                     </ul>
